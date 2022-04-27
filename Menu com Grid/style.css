@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'main main sidebar'
+        'footer footer footer';
+}
+
+.container section {
+    height: 3em;
+}
+
+.container .header {
+    display: flex;
+    justify-content: end;
+    grid-area: header;
+    background-color: #191970;
+    height: 4.6em;
+    white-space: nowrap;
+}
+
+.container .header a {
+    padding-right: 15%;
+}
+
+.container .header ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+.container .header ul li {
+    margin: 0 1em;
+}
+
+.container .header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.container .header ul li a button {
+    font-size: 1em;
+    padding: 0.6em;
+    background-color: transparent;
+    border: solid 0.5px #1E90FF;
+    border-radius: 5px;
+    color: #1E90FF;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.container .header ul li a button:hover {
+    background-color: #1E90FF;
+    color: #fff;
+}
+
+.container .header ul li a button::after {
+    border: none;
+}
+
+.container .header ul li a:hover {
+    color: #1E90FF;
+}
+
+.container .main {
+    grid-area: main;
+}
+
+.container .sidebar {
+    grid-area: sidebar;
+}
+
+.container .footer {
+    grid-area: footer;
+}
